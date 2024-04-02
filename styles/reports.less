@@ -1,10 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @blue: rgba(0, 113, 206, 1);
 @white: rgba(255, 255, 255, 1);
+@gray: rgba(217, 225, 234, 1);
+@black: rgba(14, 14, 14, 1);
 @empty: 0px;
+@subtitleSize: 16px;
+@middleWeight: 400;
 html * {
     margin: @empty;
     padding: @empty;
+}
+header {
+    background-color: @gray;
+    height: 366px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    font-family: Open Sans;
+}
+.header__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 106px;
+}
+.header__title__logo {
+    display: flex;
+    gap: 20px;
+}
+.header__title__logo__label {
+    font-size: 24px;
+    color: @black;
+    font-weight: 600;
+}
+.header__title__user-info {
+    display: flex;
+    flex-direction: column;
+}
+.header__title__logout {
+    background-color: rgba(197, 204, 212, 1);
+    border-radius: 10px;
+    height: 44px;
+    padding: 11px 22px;
+    color: @black;
+    border: none;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10.5px;
+}
+.header__body__title {
+    font-size: 42px;
+    color: @black;
+    font-weight: 700;
+}
+.header__body__subtitle {
+    color: @black;
+    font-size: @subtitleSize;
+    font-weight: @middleWeight;
 }
 footer {
     background-color: @blue;
@@ -16,8 +70,8 @@ footer {
 .footer__content {
     line-height: 23.73px;
     color: @white;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: @subtitleSize;
+    font-weight: @middleWeight;
     font-family: Open Sans;
     margin-bottom: 37px;
 }
