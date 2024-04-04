@@ -7,6 +7,7 @@
 @subtitleSize: 16px;
 @middleWeight: 400;
 @semibold: 600;
+@bold: 700;
 html * {
     margin: @empty;
     padding: @empty;
@@ -55,7 +56,7 @@ header {
 .header__body__title {
     font-size: 42px;
     color: @black;
-    font-weight: 700;
+    font-weight: @bold;
 }
 .header__body__subtitle {
     color: @black;
@@ -100,6 +101,7 @@ main {
     gap: 15px;
     border-top: 1px solid @blue;
     padding-top: 13px;
+    margin-bottom: 47px;
 }
 .main__sorts__item {
     background-color: @white;
@@ -112,6 +114,39 @@ main {
 .main__sorts__item--active {
     background-color: @blue;
     color: @white;
+}
+.main__filters {
+    display: flex;
+    gap: 35px;
+}
+.main__filters__currency, .main__filters__period {
+    height: 25px;
+    display: flex;
+    gap: 5px;
+    color: @blue;
+}
+.main__filters__select {
+    border-radius: 5px;
+    outline: 1px solid @blue;
+    border: none;
+    color: @blue;
+    padding-left: 7px;
+    padding-right: 45px;
+    appearance: none;
+    background-image: url("/img/dropdown.svg");
+    background-position: center;
+}
+.main__filters__visibility {
+    display: flex;
+    gap: 15px;
+    color: @blue;
+}
+.main__filters__visibility__items {
+    display: flex;
+    gap: 10px;
+}
+.main__filters__visibility__item--active {
+    font-weight: @bold;
 }
 footer {
     background-color: @blue;
