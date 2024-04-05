@@ -8,19 +8,23 @@
 @middleWeight: 400;
 @semibold: 600;
 @bold: 700;
+@standardTopPadding: 32px;
+@standardRadius: 10px;
+@titleSize: 18px;
+@standardGap: 15px;
 html * {
     margin: @empty;
     padding: @empty;
+    font-family: Open Sans;
 }
 header {
     background-color: @gray;
     height: 366px;
-    padding: 32px 0px;
+    padding: @standardTopPadding 0px;
     display: flex;
     flex-direction: column;
     display: flex;
     align-items: center;
-    font-family: Open Sans;
 }
 .header__title {
     display: flex;
@@ -42,12 +46,13 @@ header {
 }
 .header__title__logout {
     background-color: rgba(197, 204, 212, 1);
-    border-radius: 10px;
+    border-radius: @standardRadius;
     height: 44px;
     padding: 11px 22px;
     color: @black;
     border: none;
-    font-size: 18px;
+    font-size: @titleSize;
+    font-weight: @semibold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,13 +66,13 @@ header {
 .header__body__subtitle {
     color: @black;
     font-size: @subtitleSize;
-    font-weight: @semibold;
+    font-weight: @middleWeight;
 }
 main {
     flex-direction: column;
     display: flex;
     align-items: center;
-    padding: 32px 0px 179px;
+    padding: @standardTopPadding 0px 179px;
     background-color: @white;
 }
 .main__back-btn {
@@ -81,16 +86,16 @@ main {
 }
 .main__turnovers {
     display: flex;
-    gap: 15px;
+    gap: @standardGap;
     margin-bottom: 17px;
 }
 .main__turnovers__item {
     background-color: @white;
     color: @blue;
     border: 1px solid @blue;
-    border-radius: 10px;
+    border-radius: @standardRadius;
     padding: 8px 16px;
-    font-size: 18px;
+    font-size: @titleSize;
 }
 .main__turnovers__item--active {
     background-color: @blue;
@@ -98,7 +103,7 @@ main {
 }
 .main__sorts {
     display: inline-flex;
-    gap: 15px;
+    gap: @standardGap;
     border-top: 1px solid @blue;
     padding-top: 13px;
     margin-bottom: 47px;
@@ -107,7 +112,7 @@ main {
     background-color: @white;
     color: @blue;
     border: 1px solid @blue;
-    border-radius: 10px;
+    border-radius: @standardRadius;
     padding: 8px 16px;
     font-size: 16px;
 }
@@ -118,6 +123,7 @@ main {
 .main__filters {
     display: flex;
     gap: 35px;
+    margin-bottom: 78px;
 }
 .main__filters__currency, .main__filters__period {
     height: 25px;
@@ -134,19 +140,62 @@ main {
     padding-right: 45px;
     appearance: none;
     background-image: url("/img/dropdown.svg");
-    background-position: center;
+    background-position: calc(100% - 7px) center;
+    background-repeat: no-repeat;
 }
 .main__filters__visibility {
     display: flex;
-    gap: 15px;
+    gap: @standardGap;
     color: @blue;
 }
 .main__filters__visibility__items {
     display: flex;
     gap: 10px;
 }
+.main__filters__visibility__item {
+    cursor: pointer;
+}
 .main__filters__visibility__item--active {
+    cursor: default;
     font-weight: @bold;
+}
+.main__table {
+    font-size: 16px;
+    text-align: center;
+}
+.main__table td {
+    min-width: 117px;
+}
+.main__table__header td:not(:first-child):not(:last-child),
+.main__table__row td:not(:first-child):not(:last-child) {
+    border-left: 1px solid #DCDCDD;
+    border-right: 1px solid #DCDCDD;
+}
+.main__table__header {
+    background-color: #F6F7F8;
+}
+.main__table__row,
+.main__table__header {
+    height: 101px;
+}
+.main__table__row:nth-of-type(even) {
+    background-color: transparent;
+}
+.main__table__row:nth-of-type(odd) {
+    background-color: #F6F7F8;
+}
+.main__table__footer {
+    background-color: #58B2514D;
+    height: 45px;
+}
+.main__table__footer__total {
+    font-size: @titleSize;
+}
+.main__table__header, .main__table__footer {
+    font-weight: @semibold;
+}
+.main__table__row__write-off {
+    color: #E63027;
 }
 footer {
     background-color: @blue;
@@ -160,6 +209,5 @@ footer {
     color: @white;
     font-size: @subtitleSize;
     font-weight: @middleWeight;
-    font-family: Open Sans;
     margin-bottom: 37px;
 }
