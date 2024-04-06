@@ -26,7 +26,11 @@ header {
 }
 .header__title__logo {
     display: flex;
+    align-items: center;
     gap: 20px;
+}
+.header__title__logo__img {
+    display: block;
 }
 .header__title__logo__label {
     font-size: 24px;
@@ -54,12 +58,16 @@ header {
     align-items: center;
     gap: 10.5px;
 }
-.header__body__title {
+.header__title__logout__img {
+    width: 15.5px;
+    height: 17.4px;
+}
+.header__body h1 {
     font-size: 42px;
     color: @black;
     font-weight: @bold;
 }
-.header__body__subtitle {
+.header__body p {
     color: @black;
     font-size: @subtitleSize;
     font-weight: @middleWeight;
@@ -80,6 +88,7 @@ main {
     font-size: 14px;
     cursor: pointer;
     margin-bottom: 33px;
+    text-decoration: none;
 }
 .main__turnovers {
     display: flex;
@@ -94,7 +103,7 @@ main {
     padding: 8px 16px;
     font-size: @titleSize;
 }
-.main__turnovers__item--active {
+.main__turnovers__item:first-child {
     background-color: @blue;
     color: @white;
 }
@@ -114,7 +123,7 @@ main {
     padding: 8px 16px;
     font-size: 16px;
 }
-.main__sorts__item--active {
+.main__sorts__item:first-child {
     background-color: @blue;
     color: @white;
 }
@@ -151,8 +160,9 @@ main {
     display: flex;
     gap: 10px;
 }
-.main__filters__visibility__item {
+.main__filters__visibility__items a {
     cursor: pointer;
+    text-decoration: none;
 }
 .main__filters__visibility__item--active {
     cursor: default;
@@ -160,30 +170,30 @@ main {
 }
 .main__table {
     display: block;
-    overflow-x: scroll;
+    overflow-x: auto;
     font-size: 16px;
     text-align: center;
 }
-.main__table td {
+.main__table tbody td {
     min-width: 117px;
 }
 .main__table__header td:not(:first-child):not(:last-child),
-.main__table__row td:not(:first-child):not(:last-child) {
+.main__table tbody tr td:not(:first-child):not(:last-child) {
     border-left: 1px solid #DCDCDD;
     border-right: 1px solid #DCDCDD;
 }
 .main__table__header {
     background-color: #F6F7F8;
-}
-.main__table__row,
-.main__table__header {
     height: 101px;
 }
-.main__table__row:nth-of-type(even) {
-    background-color: transparent;
+.main__table tbody tr {
+    height: 47px;
 }
-.main__table__row:nth-of-type(odd) {
+.main__table tbody tr:nth-of-type(even) {
     background-color: #F6F7F8;
+}
+.main__table tbody tr:nth-of-type(odd) {
+    background-color: transparent;
 }
 .main__table__footer {
     background-color: #58B2514D;
@@ -211,6 +221,7 @@ footer {
     font-size: @subtitleSize;
     font-weight: @middleWeight;
     margin-bottom: 37px;
+    text-align: center;
 }
 
 @media screen and (max-width: 971px) {
@@ -244,6 +255,9 @@ footer {
     }
     .main__filters__select {
         flex-grow: 1;
+    }
+    .main__turnovers__item {
+        font-size: 14px;
     }
 }
   

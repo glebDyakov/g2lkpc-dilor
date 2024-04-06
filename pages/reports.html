@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,88 +8,92 @@
     <title>Reports</title>
 </head>
 <body>
-    <div class="col-12">
-        <header>
-            <div class="col-9">
-                <div class="header__title">
-                    <div class="header__title__logo">
+    <header>
+        <div class="col-10">
+            <div class="header__title">
+                <div class="header__title__logo">
+                    <a href="./reports.html" class="header__title__logo__img">
                         <img src="../img/logo.svg" alt="Процессинговый Центр" />
-                        <p class="header__title__logo__label">Процессинговый Центр.<br />Личный кабинет</p>
-                    </div>
-                    <div class="header__title__user-info d-none d-lg-block">
-                        <p>Пользователь: <b>aidys</b></p>
-                        <p>Клиент: <b>Айдыс</b></p>
-                    </div>
-                    <button class="header__title__logout d-none d-sm-flex">
-                        <img src="../img/logout.svg" alt="Выйти" />
-                        <p>Выйти</p>
-                    </button>
+                    </a>
+                    <p class="header__title__logo__label">Процессинговый Центр.<br />Личный кабинет</p>
                 </div>
-                <div class="header__title__user-info header__title__user-info--mobile d-block d-lg-none">
+                <div class="header__title__user-info d-none d-lg-block">
                     <p>Пользователь: <b>aidys</b></p>
                     <p>Клиент: <b>Айдыс</b></p>
                 </div>
-                <button class="header__title__logout d-flex d-sm-none">
-                    <img src="../img/logout.svg" alt="Выйти" />
-                    <p>Выйти</p>
+                <button class="btn btn-danger header__title__logout d-none d-sm-flex">
+                    <div class="header__title__logout__img" style="background-image: url(../img/logout.svg);"></div>
+                    Выйти
                 </button>
-                <div class="header__body">
-                    <p class="header__body__title">Отчеты</p>
-                    <p class="header__body__subtitle">В этом разделе Вы можете посмотреть табличные отчеты.</p>
+            </div>
+            <div class="row justify-content-between">
+                <div class="header__title__user-info header__title__user-info--mobile d-block d-lg-none w-auto">
+                    <p>Пользователь: <b>aidys</b></p>
+                    <p>Клиент: <b>Айдыс</b></p>
+                </div>
+                <button class="btn btn-danger header__title__logout d-flex d-sm-none w-auto">
+                    <div class="header__title__logout__img" style="background-image: url(../img/logout.svg);"></div>
+                    Выйти
+                </button>
+            </div>
+            <div class="header__body">
+                <h1>Отчеты</h1>
+                <p>В этом разделе Вы можете посмотреть табличные отчеты.</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="col-10">
+            <a href="./reports.html" class="main__back-btn">
+                <img src="../img/back_btn.svg" alt="Вернуться" />
+                Вернуться
+            </a>
+            <div class="main__turnovers">
+                <button class="btn btn-primary main__turnovers__item">Обороты по счету</button>
+                <button class="btn btn-primary main__turnovers__item">Обороты по картам</button>
+            </div>
+            <div class="main__sorts">
+                <button class="btn btn-primary main__sorts__item">По периодам</button>
+                <button class="btn btn-primary main__sorts__item">По валютам</button>
+                <button class="btn btn-primary main__sorts__item">По документам</button>
+                <button class="btn btn-primary main__sorts__item">Транзакции</button>
+                <button class="btn btn-primary main__sorts__item">Удаленное кредитование</button>
+            </div>
+            <div class="main__filters">
+                <div class="main__filters__currency">
+                    <p>Валюта:</p>
+                    <select class="main__filters__select" style="background-image: url(../img/dropdown.svg);">
+                        <option>Выберите валюту</option>
+                    </select>
+                </div>
+                <div class="main__filters__period">
+                    <p>Период:</p>
+                    <select class="main__filters__select" style="background-image: url(../img/dropdown.svg);">
+                        <option>Выберите период</option>
+                    </select>
+                </div>
+                <div class="main__filters__visibility">
+                    <p>Показать:</p>
+                    <div class="main__filters__visibility__items">
+                        <a href="./reports.html" class="main__filters__visibility__item--active">50</a>
+                        <a href="./reports.html">100</a>
+                        <a href="./reports.html">Все</a>
+                    </div>
                 </div>
             </div>
-        </header>
-        <main>
-            <div class="col-10">
-                <div class="main__back-btn">
-                    <img src="../img/back_btn.svg" alt="Вернуться" />
-                    <p>Вернуться</p>
-                </div>
-                <div class="main__turnovers">
-                    <button class="main__turnovers__item main__turnovers__item--active">Обороты по счету</button>
-                    <button class="main__turnovers__item">Обороты по картам</button>
-                </div>
-                <div class="main__sorts">
-                    <button class="main__sorts__item main__sorts__item--active">По периодам</button>
-                    <button class="main__sorts__item">По валютам</button>
-                    <button class="main__sorts__item">По документам</button>
-                    <button class="main__sorts__item">Транзакции</button>
-                    <button class="main__sorts__item">Удаленное кредитование</button>
-                </div>
-                <div class="main__filters">
-                    <div class="main__filters__currency">
-                        <p>Валюта:</p>
-                        <select class="main__filters__select" style="background-image: url(../img/dropdown.svg);">
-                            <option>Выберите валюту</option>
-                        </select>
-                    </div>
-                    <div class="main__filters__period">
-                        <p>Период:</p>
-                        <select class="main__filters__select" style="background-image: url(../img/dropdown.svg);">
-                            <option>Выберите период</option>
-                        </select>
-                    </div>
-                    <div class="main__filters__visibility">
-                        <p>Показать:</p>
-                        <div class="main__filters__visibility__items">
-                            <p class="main__filters__visibility__item main__filters__visibility__item--active">50</p>
-                            <p class="main__filters__visibility__item">100</p>
-                            <p class="main__filters__visibility__item">Все</p>
-                        </div>
-                    </div>
-                </div>
-                <table class="main__table">
-                    <tr class="main__table__header">
-                        <td>Период</td>
-                        <td>Начало периода</td>
-                        <td>Окончание периода</td>
-                        <td>Входящее сальдо</td>
-                        <td>Пополнение</td>
-                        <td>Списание</td>
-                        <td>В том числе дебетовых транзакций</td>
-                        <td>Исходящее сальдо</td>
-                    </tr>
-                    <tr class="main__table__row">
+            <table class="main__table">
+                <thead class="main__table__header">
+                    <td>Период</td>
+                    <td>Начало<br />периода</td>
+                    <td>Окончание<br />периода</td>
+                    <td>Входящее<br />сальдо</td>
+                    <td>Пополнение</td>
+                    <td>Списание</td>
+                    <td>В том числе<br />дебетовых<br />транзакций</td>
+                    <td>Исходящее<br />сальдо</td>
+                </thead>
+                <tbody>
+                    <tr>
                         <td>Апрель 2022</td>
                         <td>31.03.2022</td>
                         <td>30.04.2022</td>
@@ -99,7 +103,7 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
-                    <tr class="main__table__row">
+                    <tr>
                         <td>Март 2022</td>
                         <td>30.04.2022</td>
                         <td>31.05.2022</td>
@@ -109,7 +113,7 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
-                    <tr class="main__table__row">
+                    <tr>
                         <td>Апрель 2022</td>
                         <td>31.03.2022</td>
                         <td>30.04.2022</td>
@@ -119,7 +123,7 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
-                    <tr class="main__table__row">
+                    <tr>
                         <td>Март 2022</td>
                         <td>30.04.2022</td>
                         <td>31.05.2022</td>
@@ -129,7 +133,7 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
-                    <tr class="main__table__row">
+                    <tr>
                         <td>Апрель 2022</td>
                         <td>31.03.2022</td>
                         <td>30.04.2022</td>
@@ -139,7 +143,7 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
-                    <tr class="main__table__row">
+                    <tr>
                         <td>Март 2022</td>
                         <td>30.04.2022</td>
                         <td>31.05.2022</td>
@@ -149,7 +153,7 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
-                    <tr class="main__table__row">
+                    <tr>
                         <td>Апрель 2022</td>
                         <td>31.03.2022</td>
                         <td>30.04.2022</td>
@@ -159,7 +163,7 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
-                    <tr class="main__table__row">
+                    <tr>
                         <td>Март 2022</td>
                         <td>30.04.2022</td>
                         <td>31.05.2022</td>
@@ -169,7 +173,7 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
-                    <tr class="main__table__row">
+                    <tr>
                         <td>Апрель 2022</td>
                         <td>31.03.2022</td>
                         <td>30.04.2022</td>
@@ -179,7 +183,7 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
-                    <tr class="main__table__row">
+                    <tr>
                         <td>Март 2022</td>
                         <td>30.04.2022</td>
                         <td>31.05.2022</td>
@@ -189,7 +193,7 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
-                    <tr class="main__table__row">
+                    <tr>
                         <td>Апрель 2022</td>
                         <td>31.03.2022</td>
                         <td>30.04.2022</td>
@@ -199,6 +203,8 @@
                         <td></td>
                         <td>38,00</td>
                     </tr>
+                </tbody>
+                <tfoot>
                     <tr class="main__table__footer">
                         <td class="main__table__footer__total">Итого:</td>
                         <td></td>
@@ -209,12 +215,13 @@
                         <td></td>
                         <td></td>
                     </tr>
-                </table>
-            </div>
-        </main>
-        <footer>
-            <p class="footer__content">© ООО «ДиЛор» 2013–2023 гг. Все права защищены.Версия 2.05.003 от 22.01.2020</p>
-        </footer>
-    </div>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p class="footer__content d-block d-sm-none">© ООО «ДиЛор» 2013–2023 гг.<br />Все права защищены.Версия 2.05.003 от 22.01.2020</p>
+        <p class="footer__content d-none d-sm-block">© ООО «ДиЛор» 2013–2023 гг. Все права защищены.Версия 2.05.003 от 22.01.2020</p>
+    </footer>
 </body>
 </html>
