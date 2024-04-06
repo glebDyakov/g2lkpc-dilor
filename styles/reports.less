@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "global/style.less";
 @blue: rgba(0, 113, 206, 1);
 @white: rgba(255, 255, 255, 1);
 @gray: rgba(217, 225, 234, 1);
 @black: rgba(14, 14, 14, 1);
-@empty: 0px;
 @subtitleSize: 16px;
 @middleWeight: 400;
 @semibold: 600;
@@ -12,11 +11,6 @@
 @standardRadius: 10px;
 @titleSize: 18px;
 @standardGap: 15px;
-html * {
-    margin: @empty;
-    padding: @empty;
-    font-family: Open Sans;
-}
 header {
     background-color: @gray;
     height: 366px;
@@ -139,7 +133,7 @@ main {
     padding-left: 7px;
     padding-right: 45px;
     appearance: none;
-    background-image: url("/img/dropdown.svg");
+    background-image: url("../img/dropdown.svg");
     background-position: calc(100% - 7px) center;
     background-repeat: no-repeat;
 }
