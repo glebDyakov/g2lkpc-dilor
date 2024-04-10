@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/dist/blocks/header.css" />
-    <link rel="stylesheet" href="../styles/dist/blocks/main.css" />
-    <link rel="stylesheet" href="../styles/dist/blocks/footer.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Reports</title>
 </head>
 <body>
@@ -16,7 +14,7 @@
             <div class="header__title">
                 <div class="logo">
                     <a href="./reports.html" class="logo__img">
-                        <img src="../img/logo.svg" alt="Процессинговый Центр" />
+                        <img src="img/logo.svg" alt="Процессинговый Центр" />
                     </a>
                     <p class="logo__label">Процессинговый Центр.<br />Личный кабинет</p>
                 </div>
@@ -71,30 +69,30 @@
                     <button class="nav-link" id="pills-credit-tab" data-bs-toggle="pill" data-bs-target="#pills-credit" type="button" role="tab" aria-controls="pills-credit" aria-selected="false">Удаленное кредитование</button>
                 </li>
             </ul>
-            <div class="main__filters">
-                <div class="filters__currency">
-                    <p>Валюта:</p>
-                    <select class="filters__select">
-                        <option>Выберите валюту</option>
-                    </select>
-                </div>
-                <div class="filters__period">
-                    <p>Период:</p>
-                    <select class="filters__select">
-                        <option>Выберите период</option>
-                    </select>
-                </div>
-                <div class="filters__visibility">
-                    <p>Показать:</p>
-                    <div class="visibility__items">
-                        <a href="./reports.html" class="visibility__item--active">50</a>
-                        <a href="./reports.html">100</a>
-                        <a href="./reports.html">Все</a>
-                    </div>
-                </div>
-            </div>
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-period" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="tab-pane fade show active" id="pills-period" role="tabpanel" aria-labelledby="pills-period-tab">
+                    <div class="main__filters">
+                        <div class="filters__currency">
+                            <p>Валюта:</p>
+                            <select class="filters__select">
+                                <option>Выберите валюту</option>
+                            </select>
+                        </div>
+                        <div class="filters__period">
+                            <p>Период:</p>
+                            <select class="filters__select">
+                                <option>Выберите период</option>
+                            </select>
+                        </div>
+                        <div class="filters__visibility">
+                            <p>Показать:</p>
+                            <div class="visibility__items">
+                                <a href="./reports.html" class="visibility__item--active">50</a>
+                                <a href="./reports.html">100</a>
+                                <a href="./reports.html">Все</a>
+                            </div>
+                        </div>
+                    </div>
                     <table class="main__table">
                         <thead class="table__header">
                             <th>Период</th>
@@ -232,7 +230,29 @@
                         </tfoot>
                     </table>
                 </div>
-                <div class="tab-pane fade" id="pills-currency" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="tab-pane fade" id="pills-currency" role="tabpanel" aria-labelledby="pills-currency-tab">
+                    <div class="main__filters">
+                        <div class="filters__currency">
+                            <p>Валюта:</p>
+                            <select class="filters__select">
+                                <option>Выберите валюту</option>
+                            </select>
+                        </div>
+                        <div class="filters__period">
+                            <p>Период:</p>
+                            <select class="filters__select">
+                                <option>Выберите период</option>
+                            </select>
+                        </div>
+                        <div class="filters__visibility">
+                            <p>Показать:</p>
+                            <div class="visibility__items">
+                                <a href="./reports.html" class="visibility__item--active">50</a>
+                                <a href="./reports.html">100</a>
+                                <a href="./reports.html">Все</a>
+                            </div>
+                        </div>
+                    </div>
                     <table class="main__table">
                         <thead class="table__header">
                             <th>Период</th>
@@ -370,7 +390,29 @@
                         </tfoot>
                     </table>
                 </div>
-                <div class="tab-pane fade" id="pills-docs" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="tab-pane fade" id="pills-docs" role="tabpanel" aria-labelledby="pills-docs-tab">
+                    <div class="main__filters">
+                        <div class="filters__currency">
+                            <p>Валюта:</p>
+                            <select class="filters__select">
+                                <option>Выберите валюту</option>
+                            </select>
+                        </div>
+                        <div class="filters__period">
+                            <p>Период:</p>
+                            <select class="filters__select">
+                                <option>Выберите период</option>
+                            </select>
+                        </div>
+                        <div class="filters__visibility">
+                            <p>Показать:</p>
+                            <div class="visibility__items">
+                                <a href="./reports.html" class="visibility__item--active">50</a>
+                                <a href="./reports.html">100</a>
+                                <a href="./reports.html">Все</a>
+                            </div>
+                        </div>
+                    </div>
                     <table class="main__table">
                         <thead class="table__header">
                             <th>Период</th>
@@ -508,7 +550,29 @@
                         </tfoot>
                     </table>
                 </div>
-                <div class="tab-pane fade" id="pills-transaction" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="tab-pane fade" id="pills-transaction" role="tabpanel" aria-labelledby="pills-transaction-tab">
+                    <div class="main__filters">
+                        <div class="filters__currency">
+                            <p>Валюта:</p>
+                            <select class="filters__select">
+                                <option>Выберите валюту</option>
+                            </select>
+                        </div>
+                        <div class="filters__period">
+                            <p>Период:</p>
+                            <select class="filters__select">
+                                <option>Выберите период</option>
+                            </select>
+                        </div>
+                        <div class="filters__visibility">
+                            <p>Показать:</p>
+                            <div class="visibility__items">
+                                <a href="./reports.html" class="visibility__item--active">50</a>
+                                <a href="./reports.html">100</a>
+                                <a href="./reports.html">Все</a>
+                            </div>
+                        </div>
+                    </div>
                     <table class="main__table">
                         <thead class="table__header">
                             <th>Период</th>
@@ -646,7 +710,29 @@
                         </tfoot>
                     </table>
                 </div>
-                <div class="tab-pane fade" id="pills-credit" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="tab-pane fade" id="pills-credit" role="tabpanel" aria-labelledby="pills-credit-tab">
+                    <div class="main__filters">
+                        <div class="filters__currency">
+                            <p>Валюта:</p>
+                            <select class="filters__select">
+                                <option>Выберите валюту</option>
+                            </select>
+                        </div>
+                        <div class="filters__period">
+                            <p>Период:</p>
+                            <select class="filters__select">
+                                <option>Выберите период</option>
+                            </select>
+                        </div>
+                        <div class="filters__visibility">
+                            <p>Показать:</p>
+                            <div class="visibility__items">
+                                <a href="./reports.html" class="visibility__item--active">50</a>
+                                <a href="./reports.html">100</a>
+                                <a href="./reports.html">Все</a>
+                            </div>
+                        </div>
+                    </div>
                     <table class="main__table">
                         <thead class="table__header">
                             <th>Период</th>
