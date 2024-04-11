@@ -1,12 +1,4 @@
-@gray: rgba(217, 225, 234, 1);
-@black: rgba(14, 14, 14, 1);
-@standardTopPadding: 32px;
-@standardRadius: 10px;
-@titleSize: 18px;
-@subtitleSize: 16px;
-@middleWeight: 400;
-@semibold: 600;
-@bold: 700;
+@import "global/variables.less";
 header {
     background-color: @gray;
     padding: @standardTopPadding 0px;
@@ -14,40 +6,41 @@ header {
     flex-direction: column;
     display: flex;
     align-items: center;
-}
-.header__title {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 106px;
-    @media screen and (max-width: 971px) {
-        margin-bottom: 34px;
+    .header__title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 106px;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .logo a {
+                display: block;
+            }
+            .logo p {
+                font-size: 24px;
+                color: @black;
+                font-weight: @semibold;
+                margin-bottom: 0;
+                @media screen and (max-width: 971px) {
+                    font-size: 18px;
+                }
+            }
+        }
+        .title__user-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .title__user-info--mobile,
+        .btn-logout--mobile {
+            margin-bottom: 45px;
+        }
+        @media screen and (max-width: 971px) {
+            margin-bottom: 34px;
+        }
     }
 }
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.logo__img {
-    display: block;
-}
-.logo__label {
-    font-size: 24px;
-    color: @black;
-    font-weight: @semibold;
-    margin-bottom: 0;
-    @media screen and (max-width: 971px) {
-        font-size: 18px;
-    }
-}
-.title__user-info {
-    display: flex;
-    flex-direction: column;
-}
-.title__user-info--mobile {
-    margin-bottom: 45px;
-}
-.title__logout {
+.btn-logout {
     background-color: rgba(197, 204, 212, 1);
     border-radius: @standardRadius;
     height: 44px;
@@ -69,13 +62,22 @@ header {
         background-repeat: no-repeat;
     }
 }
-.header__body h1 {
-    font-size: 42px;
-    color: @black;
-    font-weight: @bold;
-}
-.header__body p {
-    color: @black;
-    font-size: @subtitleSize;
-    font-weight: @middleWeight;
+.header__body {
+    h1 {
+        font-size: 42px;
+        color: @black;
+        font-weight: @bold;
+        margin-bottom: 12px;
+        @media screen and (max-width: 971px) {
+            margin-bottom: 13px;
+        }
+        @media screen and (max-width: 480px) {
+            margin-bottom: 8px;
+        }
+    }
+    p {
+        color: @black;
+        font-size: @subtitleSize;
+        font-weight: @middleWeight;
+    }
 }

@@ -1,20 +1,29 @@
-@blue: rgba(0, 113, 206, 1);
-@white: rgba(255, 255, 255, 1);
-@subtitleSize: 16px;
-@middleWeight: 400;
+@import "global/variables.less";
 footer {
     background-color: @blue;
     height: 163px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-}
-.footer__content {
-    line-height: 23.73px;
-    color: @white;
-    font-size: @subtitleSize;
-    font-weight: @middleWeight;
-    margin-bottom: 37px;
-    text-align: center;
-    padding: 0px 50px;
+    .footer__content {
+        line-height: 23.73px;
+        color: @white;
+        font-size: @subtitleSize;
+        font-weight: @middleWeight;
+        margin-bottom: 37px;
+        text-align: center;
+        padding: 0px 50px;
+        @media screen and (max-width: 971px) {
+            margin-bottom: 34px;
+        }
+        @media screen and (max-width: 480px) {
+            margin-bottom: 23px;
+        }
+    }
+    @media screen and (max-width: 971px) {
+        height: 125px;
+    }
+    @media screen and (max-width: 480px) {
+        height: 108px;
+    }
 }

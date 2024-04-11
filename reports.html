@@ -22,16 +22,16 @@
                     <p>Пользователь: <b>aidys</b></p>
                     <p>Клиент: <b>Айдыс</b></p>
                 </div>
-                <button class="btn title__logout d-none d-sm-flex">
+                <button class="btn btn-secondary btn-logout d-none d-sm-flex">
                     Выйти
                 </button>
             </div>
-            <div class="row justify-content-between">
+            <div class="container row justify-content-between">
                 <div class="title__user-info title__user-info--mobile d-block d-lg-none w-auto">
                     <p>Пользователь: <b>aidys</b></p>
                     <p>Клиент: <b>Айдыс</b></p>
                 </div>
-                <button class="btn title__logout d-flex d-sm-none w-auto">
+                <button class="btn btn-secondary btn-logout btn-logout--mobile d-flex d-sm-none w-auto">
                     Выйти
                 </button>
             </div>
@@ -43,15 +43,17 @@
     </header>
     <main>
         <div class="container">
-            <a href="./reports.html" class="main__back-btn">
+            <a href="./reports.html" class="btn btn-link btn-back px-0 py-0">
                 Вернуться
             </a>
-            <div class="main__turnovers">
-                <input type="radio" class="btn-check active" name="turnovers" id="Обороты по счету" autocomplete="off" checked>
-                <label class="btn btn-primary" for="Обороты по счету">Обороты по счету</label>
-                <input type="radio" class="btn-check" name="turnovers" id="Обороты по картам" autocomplete="off">
-                <label class="btn btn-primary" for="Обороты по картам">Обороты по картам</label>
-            </div>
+            <ul class="nav nav-pills main__turnovers" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-invoice-tab" data-bs-toggle="pill" data-bs-target="#pills-invoice" type="button" role="tab" aria-controls="pills-invoice" aria-selected="true">Обороты по счету</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-card-tab" data-bs-toggle="pill" data-bs-target="#pills-card" type="button" role="tab" aria-controls="pills-card" aria-selected="true">Обороты по картам</button>
+                </li>
+            </ul>
             <ul class="nav nav-pills main__sorts" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="pills-period-tab" data-bs-toggle="pill" data-bs-target="#pills-period" type="button" role="tab" aria-controls="pills-period" aria-selected="true">По периодам</button>

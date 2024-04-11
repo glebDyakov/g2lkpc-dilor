@@ -1,11 +1,4 @@
-@blue: rgba(0, 113, 206, 1);
-@white: rgba(255, 255, 255, 1);
-@semibold: 600;
-@bold: 700;
-@standardTopPadding: 32px;
-@standardRadius: 10px;
-@titleSize: 18px;
-@standardGap: 15px;
+@import "global/variables.less";
 main {
     overflow: hidden;
     flex-direction: column;
@@ -13,8 +6,117 @@ main {
     align-items: center;
     padding: @standardTopPadding 0px 179px;
     background-color: @white;
+    .main__turnovers {
+        display: flex;
+        gap: 17px;
+        margin-bottom: 17px;
+        .nav-link {
+            background-color: @white;
+            color: @blue;
+            border: 1px solid @blue;
+            border-radius: @standardRadius;
+            padding: 8px 16px;
+            font-size: @titleSize;
+            @media screen and (max-width: @mobileMaxWidth) {
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: @mobileMaxWidth) {
+            gap: 23px;
+            margin-bottom: 21px;
+        }
+    }
+    .main__sorts {
+        flex-wrap: wrap;
+        display: inline-flex;
+        gap: @middleGap;
+        border-top: 1px solid @blue;
+        padding-top: 13px;
+        margin-bottom: 47px;
+        button {
+            background-color: @blue;
+            color: @blue;
+            outline: 1px solid @blue;
+            border-radius: @standardRadius;
+            padding: 8px 16px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            @media screen and (max-width: @tabletMaxWidth) {
+                font-size: 14px;
+                height: 35px;
+            }
+            @media screen and (max-width: @mobileMaxWidth) {
+                height: 32px;
+            }
+        }
+        @media screen and (max-width: @tabletMaxWidth) {
+            gap: 10px;
+            padding-top: 14px;
+        }
+        @media screen and (max-width: @mobileMaxWidth) {
+            column-gap: 6px;
+            row-gap: 9px;
+            padding-top: 20px;
+        }
+    }
+    .main__turnovers .nav-link,
+    .main__sorts .nav-link {
+        border-radius: @standardRadius;
+    }
+    .main__filters {
+        display: flex;
+        gap: 35px;
+        margin-bottom: 78px;
+        .filters__currency, .filters__period {
+            height: 25px;
+            display: flex;
+            gap: 5px;
+            color: @blue;
+        }
+        .filters__visibility {
+            display: flex;
+            gap: @standardGap;
+            color: @blue;
+            .visibility__items {
+                display: flex;
+                gap: 10px;
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+                .visibility__item--active {
+                    cursor: default;
+                    font-weight: @bold;
+                }
+                @media screen and (max-width: @tabletMaxWidth) {
+                    gap: @middleGap;
+                }
+                @media screen and (max-width: @mobileMaxWidth) {
+                    gap: 15px;
+                }
+            }
+            @media screen and (max-width: @tabletMaxWidth) {
+                gap: 4px;
+            }
+        }
+        @media screen and (max-width: @tabletMaxWidth) {
+            flex-wrap: wrap;
+            margin-bottom: 49px;
+        }
+        @media screen and (max-width: @mobileMaxWidth) {
+            flex-direction: column;
+            margin-bottom: 41px;
+        }
+    }
+    @media screen and (max-width: @tabletMaxWidth) {
+        padding-bottom: 111px;
+    }
+    @media screen and (max-width: @mobileMaxWidth) {
+        padding-bottom: 95px;
+    }
 }
-.main__back-btn {
+.btn-back {
     gap: 5px;
     display: flex;
     align-items: center;
@@ -32,68 +134,15 @@ main {
         background-repeat: no-repeat;
         background-position: center;
     }
-}
-.main__turnovers {
-    display: flex;
-    gap: @standardGap;
-    margin-bottom: 17px;
-}
-.main__turnovers label {
-    background-color: @white;
-    color: @blue;
-    border: 1px solid @blue;
-    border-radius: @standardRadius;
-    padding: 8px 16px;
-    font-size: @titleSize;
-    @media screen and (max-width: 480px) {
-        font-size: 14px;
+    @media screen and (max-width: @tabletMaxWidth) {
+        margin-bottom: 39px;
+    }
+    @media screen and (max-width: @mobileMaxWidth) {
+        margin-bottom: 30px;
     }
 }
-.main__sorts {
-    flex-wrap: wrap;
-    display: inline-flex;
-    gap: @standardGap;
-    border-top: 1px solid @blue;
-    padding-top: 13px;
-    margin-bottom: 47px;
-}
-.main__sorts button {
+.nav-pills .nav-link.active {
     background-color: @blue;
-    color: @blue;
-    outline: 1px solid @blue;
-    border-radius: @standardRadius;
-    padding: 8px 16px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    @media screen and (max-width: 971px) {
-        font-size: 14px;
-        height: 35px;
-    }
-    @media screen and (max-width: 480px) {
-        height: 32px;
-    }
-}
-.main__sorts__item:first-child {
-    background-color: @blue;
-    color: @white;
-}
-.main__filters {
-    display: flex;
-    gap: 35px;
-    margin-bottom: 78px;
-    @media screen and (max-width: 971px) {
-        flex-wrap: wrap;
-    }
-    @media screen and (max-width: 480px) {
-        flex-direction: column;
-    }
-}
-.filters__currency, .filters__period {
-    height: 25px;
-    display: flex;
-    gap: 5px;
-    color: @blue;
 }
 .filters__select {
     background-color: @white;
@@ -107,64 +156,49 @@ main {
     background-image: url("img/dropdown.svg");
     background-position: calc(100% - 7px) center;
     background-repeat: no-repeat;
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: @mobileMaxWidth) {
         flex-grow: 1;
     }
-}
-.filters__visibility {
-    display: flex;
-    gap: @standardGap;
-    color: @blue;
-}
-.visibility__items {
-    display: flex;
-    gap: 10px;
-}
-.visibility__items a {
-    cursor: pointer;
-    text-decoration: none;
-}
-.visibility__item--active {
-    cursor: default;
-    font-weight: @bold;
 }
 .main__table {
     display: block;
     overflow-x: auto;
     font-size: 16px;
     text-align: center;
-}
-.main__table tbody td {
-    min-width: 117px;
+    .table__header {
+        background-color: #F6F7F8;
+        height: 101px;
+    }
+    .table__footer {
+        background-color: #58B2514D;
+        height: 45px;
+    }
+    .table__total {
+        font-size: @titleSize;
+    }
+    .table__header, .table__footer {
+        font-weight: @semibold;
+    }
+    tbody {
+        td {
+            min-width: 117px;
+        }
+        tr {
+            height: 47px;
+            tr:nth-of-type(even) {
+                background-color: #F6F7F8;
+            }
+            tr:nth-of-type(odd) {
+                background-color: transparent;
+            }
+            .table__write-off {
+                color: #E63027;
+            }
+        }
+    }
 }
 .table__header th:not(:first-child):not(:last-child),
 .main__table tbody tr td:not(:first-child):not(:last-child) {
     border-left: 1px solid #DCDCDD;
     border-right: 1px solid #DCDCDD;
-}
-.table__header {
-    background-color: #F6F7F8;
-    height: 101px;
-}
-.main__table tbody tr {
-    height: 47px;
-}
-.main__table tbody tr:nth-of-type(even) {
-    background-color: #F6F7F8;
-}
-.main__table tbody tr:nth-of-type(odd) {
-    background-color: transparent;
-}
-.table__footer {
-    background-color: #58B2514D;
-    height: 45px;
-}
-.table__total {
-    font-size: @titleSize;
-}
-.table__header, .table__footer {
-    font-weight: @semibold;
-}
-.table__write-off {
-    color: #E63027;
 }
